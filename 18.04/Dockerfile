@@ -52,7 +52,7 @@ RUN cd / && \
     a2enmod php7.3
 
 # Clean up build environment
-RUN rm -rf /php-src/* /bison-2.7/* /bison-2.7.tar.gz && \
+RUN rm -rf /php-src/* /bison-2.7/* /bison-2.7.tar.gz
 
 # Uninstall build prerequisites
 RUN apt remove --autoremove -y autoconf automake gcc g++ build-essential \
