@@ -25,7 +25,6 @@ RUN apt update && \
 # Download PHP v7.3.1 source code
 RUN cd / && \
     git clone -b PHP-7.3.1 --single-branch https://github.com/php/php-src.git && \
-
     export PATH=$PATH:/usr/local/bison/bin && \
 
 # Configure Apache2 mod-php
@@ -50,7 +49,7 @@ RUN cd / && \
     a2dismod mpm_event && a2enmod mpm_prefork && \
 
 # Reenable PHP
-    a2enmod php7.3 && \
+    a2enmod php7.3
 
 # Clean up build environment
 RUN rm -rf /php-src/* /bison-2.7/* /bison-2.7.tar.gz && \
