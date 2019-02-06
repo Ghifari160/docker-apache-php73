@@ -31,6 +31,7 @@ RUN git clone -b PHP-7.3.1 --single-branch https://github.com/php/php-src.git &&
     cd /php-src && \
     ./buildconf --force && \
     ./configure --with-apxs2=/usr/bin/apxs2 --without-pear \
+                --with-libdir=/lib/x86_64-linux-gnu \
                 --enable-calendar \
                 --enable-exif \
                 --enable-ftp \
