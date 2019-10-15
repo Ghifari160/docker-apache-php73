@@ -1,6 +1,6 @@
 FROM ghifari160/apache:18.04
 
-LABEL maintainer "GHIFARI160 <ghifari160@ghifari160.com>"
+LABEL maintainer "GHIFARI160 <ghifari@ghifari160.com>"
 
 # Disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
@@ -25,8 +25,8 @@ RUN apt update && \
                    libreadline-dev zlib1g-dev libssl-dev && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
-# Build and Install PHP v7.3.1 WITHOUT PEAR
-RUN git clone -b PHP-7.3.1 --single-branch https://github.com/php/php-src.git && \
+# Build and Install PHP v7.3.10 WITHOUT PEAR
+RUN git clone -b PHP-7.3.10 --single-branch https://github.com/php/php-src.git && \
     export PATH=$PATH:/usr/local/bison/bin && \
     cd /php-src && \
     ./buildconf --force && \
